@@ -21,7 +21,7 @@ if (isValid ==True):
     
 #use bs4 to read the content of the page
     source_page = requests.get(input_url)
-    sitemap = bs(p.content, 'html.parser')
+    sitemap = bs(source_page.content, 'html.parser')
 #append the required data to a list called urls
     urls = [ele.text for ele in sitemap.findAll('loc')]
     
